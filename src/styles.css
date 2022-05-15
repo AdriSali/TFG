@@ -1,0 +1,299 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* -------- Search -------- */
+
+.Search__Container{
+    position: relative;
+    /* top: 0; */
+    width: 80%;
+    margin: auto;
+    margin-top: 200px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    transition: all 1.2s;
+    /* text-align: start; */
+    /* border-radius: 5px; */
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.Search__Input{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    outline-color: rgb(130, 209, 223);
+}
+
+.Search__AdvSearch__Toggle{
+    padding-top: 4px;
+    margin: auto;
+    width: 90%  ;
+    text-align: end;
+}
+.Search__AdvSearch__Toggle small:hover{
+    color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.Search__AdvSearch__Container{
+    padding: 15px 0 15px 20%;
+    font-size: small;
+    margin: auto;
+    text-align: start;
+    box-shadow: inset 0px 1px rgba(0,0,0,0.16), inset 0 2px 10px 0 rgba(0,0,0,0.12);
+    background-color:whitesmoke;
+}
+
+.Search__AdvSearch__Input{
+    min-width: 20%;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+.Search__ButtonWrapper{
+    display: inline-block;
+    width: 100%;
+}
+
+.Search__Button{
+    /* float: left;  */
+    width: 60%;
+    margin-left: 5%;
+    /* min-width: 80px; */
+    /* background-color:  rgb(130, 209, 223); */
+    background-color:  black;
+    border-style: none;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.Search__Button:disabled{
+    opacity: .4;
+    color: gray;
+}
+
+/* -------- Images_Grid -------- */
+
+.Images_Grid__Container{
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    justify-content: center;
+    column-gap: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.Images_Grid__Text{
+    margin-top: 80px;
+    text-align: center;
+    color: rgb(100, 100, 100);
+    font-size: large;
+}
+
+
+/* -------- Contacto -------- */
+
+
+.Contact__Butt{
+    overflow: hidden;
+    float: right;
+    background-color: black;
+    color: white;
+    width: 20%;
+    border-style: none;
+    padding: 5px 10px 5px 10px;
+    margin-top: 10px;
+    margin-right: 5%;
+    margin-left: 10%;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#overlay_Display{
+    display: none;
+}
+
+#close_Sharp{
+    filter: invert(1);
+    position: fixed;
+    top: 20px;
+    right: 40px;
+    width: 80px;
+    transition: all 0.4s;
+    fill: aqua;
+}
+
+#close_Sharp:hover{
+    transform: scale(0.8);
+}
+
+.Contacto__Container{
+    display: flex;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 90;
+    top: 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.73);
+
+}
+
+.Contacto__Form textarea{
+    resize: none;
+    min-height: 60px;
+    width: 90%;
+}
+
+.Contacto__Form {
+    text-align: left;
+    width: 50%;
+    padding: 30px 0px 30px 40px;
+    margin: 30px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px 0 rgba(255,255,255,0.16), 0 2px 10px 0 rgba(255,255,255,0.12);
+
+}
+
+.Contacto__Form label{
+    text-align: left;
+    margin-left: 10px;
+}
+
+.Contacto__Form input {
+    width: 90%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    outline-color: rgb(130, 209, 223);
+    margin-bottom: 10px;
+}
+
+.Contact__Submit{
+    background-color:  black;
+    border-style: none;
+    color: #fff;
+    padding: 5px 10px 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* -------- Foto -------- */
+
+.Photo_card__Container{
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    line-height: 0;
+    position: relative;
+    background: black;
+    overflow: hidden;
+}
+
+.Photo_card__Image{
+    height: 100%;
+    width: 100%;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.Photo_card__Image:hover{
+    opacity: 0.6;
+}
+
+.test{
+    z-index: 10;
+    /* display: none; */
+    opacity: 0;
+    position: absolute;
+    color: #fff;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.Photo_card__Overlay_Element{
+    position: absolute;
+    z-index: 10;
+    color: #fff;
+    opacity: 0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.ionicon{
+    /* display: inline-block; */
+    vertical-align: middle;
+    height: 25px;
+}
+
+
+.Photo_card__Overlay_Element--top_left{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 80%;
+    /* overflow: hidden; */
+    /* word-wrap: break-word; */
+    /* text-overflow: clip; */
+    padding-right: 10px;
+}
+
+.Photo_card__Overlay_Element--bottom_left{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+#Photo_card__Overlay_Heart{
+    height: 25px;
+    vertical-align: middle;
+    filter: invert(1);
+}
+
+.Photo_card__Overlay_Element--bottom_right{
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+}
+.Photo_card__Overlay_Element--bottom_right > a{
+    /* text-decoration: none; */
+    color: #fff;
+}
+
+.Photo_card__Container:hover .Photo_card__Overlay_Element{
+    opacity: 1;
+}
+
+
+.test2 > h2{
+    /* text-overflow: ellipsis; */
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+.test3 > h3 {
+    position: absolute;
+    bottom: 90px;
+}
+
+.Photo_card__Container:hover .test{ 
+    opacity: 1;
+    /* display: inline; */
+}
+
